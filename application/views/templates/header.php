@@ -138,36 +138,36 @@ _________________________________________________________ -->
                                     <div class="col-sm-3">
                                         <h5>Camisas</h5>
                                         <ul>
-                                            <li><a href="category-full.html">Femininas</a>
+                                            <li><a href="<?= site_url('tipo/index/1')?>">Femininas</a>
                                             </li>
-                                            <li><a href="category-full.html">Masculinas</a>
+                                            <li><a href="<?= site_url('tipo/index/2')?>">Masculinas</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="col-sm-3">
                                         <h5>Jaquetas & Blusas</h5>
                                         <ul>
-                                            <li><a href="category.html">Femininas</a>
+                                            <li><a href="<?= site_url('tipo/index/3')?>">Femininas</a>
                                             </li>
-                                            <li><a href="category.html">Masculinas</a>
+                                            <li><a href="<?= site_url('tipo/index/4')?>">Masculinas</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="col-sm-3">
                                         <h5>Canecas</h5>
                                         <ul>
-                                            <li><a href="category.html">Canecas</a>
+                                            <li><a href="<?= site_url('tipo/index/5')?>">Canecas</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="col-sm-3">
                                         <h5>Informática</h5>
                                         <ul>
-                                            <li><a href="category.html">Mouse pad</a>
+                                            <li><a href="<?= site_url('tipo/index/6')?>">Mouse pad</a>
                                             </li>
-                                            <li><a href="category.html">Pendrive</a>
+                                            <li><a href="<?= site_url('tipo/index/7')?>">Pendrive</a>
                                             </li>
-                                            <li><a href="category.html">Mouse</a>
+                                            <li><a href="<?= site_url('tipo/index/8')?>">Mouse</a>
                                             </li>
                                         </ul>
                                     </div>
