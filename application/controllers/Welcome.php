@@ -20,6 +20,10 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome/home');
+		$this->load->model('Produto_model');
+
+		$data['melhores_semana'] = $this->Produto_model->get_produto(['melhor_semana' => 1]);
+
+		$this->load->template('welcome/home', $data);
 	}
 }

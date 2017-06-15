@@ -9,9 +9,17 @@ class Produto_model extends CI_Model
     }
 
 
-    public function get_produto($id)
+    public function get_produto($info)
     {
-        return $this->db->get_where('produto', ['id' => $id])->result();
+        if(is_array($info)){
+            $result = $this->db->get_where('produto', $info)->result();
+        }else{
+            $result = $this->db->get_where('produto', ['id' => $info])->result();
+        }
+
+
+
+        return $result;
     }
 
     public function get_produto_by_tipo($id_tipo)

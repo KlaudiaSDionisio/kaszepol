@@ -38,17 +38,20 @@ _________________________________________________________ -->
                             <img src="/kaszepol/assets/img/produtos_prontos/<?= $produto->imagem ?>" alt="" class="img-responsive">
                         </div>
 
-                        <div class="ribbon sale">
-                            <div class="theribbon">SALE</div>
-                            <div class="ribbon-background"></div>
-                        </div>
-                        <!-- /.ribbon -->
+                        <?php if (!is_null($produto->preco_promocao) && $produto->preco_promocao > 0): ?>
+                            <div class="ribbon sale">
+                                <div class="theribbon">SALE</div>
+                                <div class="ribbon-background"></div>
+                            </div>
+                            <!-- /.ribbon -->
+                        <?php endif; ?>
 
-                        <div class="ribbon new">
-                            <div class="theribbon">NEW</div>
-                            <div class="ribbon-background"></div>
-                        </div>
-                        <!-- /.ribbon -->
+                        <?php if($produto->novo):?>
+                            <div class="ribbon new">
+                                <div class="theribbon">NOVO</div>
+                                <div class="ribbon-background"></div>
+                            </div>
+                        <?php endif;?>
 
                     </div>
                     <div class="col-sm-6">
@@ -56,8 +59,13 @@ _________________________________________________________ -->
                             <h1 class="text-center"><?= $produto->nome ?></h1>
                             <p class="goToDescription"><a href="#details" class="scroll-to">Scroll to product details, material & care and sizing</a>
                             </p>
-                            <p class="price">R$ <?= $produto->preco ?></p>
-
+                            <div class="text">
+                                <?php if (!is_null($produto->preco_promocao) && $produto->preco_promocao > 0): ?>
+                                    <p class="price"><del style="color:darkgray"> R$<?= $produto->preco ?></del> R$<?= $produto->preco_promocao ?></p>
+                                <?php else: ?>
+                                    <p class="price">R$<?= $produto->preco ?></p>
+                                <?php endif ?>
+                            </div>
                             <p class="text-center buttons">
                                 <a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Adicionar ao carrinho</a>
                             </p>
@@ -118,24 +126,47 @@ _________________________________________________________ -->
                             <div class="flip-container">
                                 <div class="flipper">
                                     <div class="front">
-                                        <a href="detail.html">
+                                        <a href="<?= site_url("produto/detalhe/$p->id")?>">
                                             <img src="<?= asset_url("img/produtos_prontos/$p->imagem")?>" alt="" class="img-responsive">
                                         </a>
                                     </div>
                                     <div class="back">
-                                        <a href="detail.html">
+                                        <a href="<?= site_url("produto/detalhe/$p->id")?>">
                                             <img src="<?= asset_url("img/produtos_prontos/$p->imagem")?>" alt="" class="img-responsive">
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <a href="detail.html" class="invisible">
-                                <img src="/kaszepol/assets/img/product2.jpg" alt="" class="img-responsive">
+                            <a href="<?= site_url("produto/detalhe/$p->id")?>" class="invisible">
+                                <img src="<?= asset_url("img/produtos_prontos/$p->imagem")?>" alt="" class="img-responsive">
                             </a>
+
+
                             <div class="text">
-                                <h3><?= $p->nome?></h3>
-                                <p class="price">R$ <?= $p->preco?></p>
+                                <h3><a href="<?= site_url("produto/detalhe/$p->id")?>"><?= $p->nome ?></a></h3>
+
+                                <?php if (!is_null($p->preco_promocao) && $p->preco_promocao > 0): ?>
+                                    <p class="price"><del>R$<?= $p->preco ?></del> R$<?= $p->preco_promocao ?></p>
+                                <?php else: ?>
+                                    <p class="price">R$<?= $p->preco ?></p>
+                                <?php endif ?>
                             </div>
+                            <!-- /.text -->
+
+                            <?php if (!is_null($p->preco_promocao) && $p->preco_promocao > 0): ?>
+                                <div class="ribbon sale">
+                                    <div class="theribbon">SALE</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                                <!-- /.ribbon -->
+                            <?php endif; ?>
+
+                            <?php if($p->novo):?>
+                                <div class="ribbon new">
+                                    <div class="theribbon">NOVO</div>
+                                    <div class="ribbon-background"></div>
+                                </div>
+                            <?php endif;?>
                         </div>
                         <!-- /.product -->
                     </div>

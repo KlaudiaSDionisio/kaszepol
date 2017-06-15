@@ -47,7 +47,7 @@ _________________________________________________________ -->
 <div id="top">
     <div class="container">
         <div class="col-md-6 offer" data-animate="fadeInDown">
-            <a href="#" class="btn btn-success btn-sm" data-animate-hover="shake">Oferta de dia</a>  <a href="index.html#hot">Ganha desconto de 15% na compra de R$ 100!</a>
+            <a href="#hot" class="btn btn-success btn-sm" data-animate-hover="shake">Oferta do dia</a>  <a href="#">Ganha desconto de 15% na compra de R$ 100!</a>
         </div>
         <div class="col-md-6" data-animate="fadeInDown">
             <ul class="menu">
@@ -57,7 +57,7 @@ _________________________________________________________ -->
                 </li>
                 <li><a href="contact.html">Contato</a>
                 </li>
-                <li><a href="#">Mais visualizados</a>
+                <li><a href="#hot">Mais visualizados</a>
                 </li>
             </ul>
         </div>
@@ -104,7 +104,7 @@ _________________________________________________________ -->
     <div class="container">
         <div class="navbar-header">
 
-            <a class="navbar-brand home" href="index.html" data-animate-hover="bounce">
+            <a class="navbar-brand home" href="<?=site_url()?>" data-animate-hover="bounce">
                 <img src="<?= asset_url('img/polska/logo.png')?>" alt="Obaju logo" class="hidden-xs">
                 <img src="<?= asset_url('img/polska/logo.png')?>" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - ir para home</span>
             </a>
