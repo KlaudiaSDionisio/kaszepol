@@ -20,19 +20,19 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
 
     <!-- styles -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="/kaszepol/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/kaszepol/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/kaszepol/assets/css/animate.min.css" rel="stylesheet">
+    <link href="/kaszepol/assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="/kaszepol/assets/css/owl.theme.css" rel="stylesheet">
 
     <!-- theme stylesheet -->
-    <link href="css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+    <link href="/kaszepol/assets/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
 
     <!-- your stylesheet with modifications -->
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="/kaszepol/assets/css/custom.css" rel="stylesheet">
 
-    <script src="js/respond.min.js"></script>
+    <script src="/kaszepol/assets/js/respond.min.js"></script>
 
     <link rel="shortcut icon" href="favicon.png">
 
@@ -104,8 +104,8 @@ _________________________________________________________ -->
         <div class="navbar-header">
 
             <a class="navbar-brand home" href="index.html" data-animate-hover="bounce">
-                <img src="img/logo.png" alt="Obaju logo" class="hidden-xs">
-                <img src="img/logo-small.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - ir para home</span>
+                <img src="/kaszepol/assets/img/logo.png" alt="Obaju logo" class="hidden-xs">
+                <img src="/kaszepol/assets/img/logo-small.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - ir para home</span>
             </a>
             <div class="navbar-buttons">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
@@ -277,11 +277,11 @@ _________________________________________________________ -->
                 <ul class="breadcrumb">
                     <li><a href="#">Home</a>
                     </li>
-                    <li><a href="#">Ladies</a>
+                    <li><a href="#"><?= $categoria->nome ?></a>
                     </li>
-                    <li><a href="#">Tops</a>
+                    <li><a href="#"><?= $tipo_cat->nome ?></a>
                     </li>
-                    <li>White Blouse Armani</li>
+                    <li><?= $produto->nome ?></li>
                 </ul>
 
             </div>
@@ -294,7 +294,7 @@ _________________________________________________________ -->
 
                 <div class="banner">
                     <a href="#">
-                        <img src="img/banner.jpg" alt="sales 2014" class="img-responsive">
+                        <img src="/kaszepol/assets/img/banner.jpg" alt="sales 2014" class="img-responsive">
                     </a>
                 </div>
             </div>
@@ -304,7 +304,7 @@ _________________________________________________________ -->
                 <div class="row" id="productMain">
                     <div class="col-sm-6">
                         <div id="mainImage">
-                            <img src="img/detailbig1.jpg" alt="" class="img-responsive">
+                            <img src="/kaszepol/assets/img/produtos_prontos/<?= $produto->imagem ?>" alt="" class="img-responsive">
                         </div>
 
                         <div class="ribbon sale">
@@ -322,10 +322,10 @@ _________________________________________________________ -->
                     </div>
                     <div class="col-sm-6">
                         <div class="box">
-                            <h1 class="text-center">White Blouse Armani</h1>
+                            <h1 class="text-center"><?= $produto->nome ?></h1>
                             <p class="goToDescription"><a href="#details" class="scroll-to">Scroll to product details, material & care and sizing</a>
                             </p>
-                            <p class="price">$124.00</p>
+                            <p class="price">R$ <?= $produto->preco ?></p>
 
                             <p class="text-center buttons">
                                 <a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a>
@@ -343,18 +343,18 @@ _________________________________________________________ -->
 
                 <div class="box" id="details">
                     <p>
-                    <h4>Product details</h4>
-                    <p>White lace top, woven, has a round neck, short sleeves, has knitted lining attached</p>
-                    <h4>Material & care</h4>
-                    <ul>
-                        <li>Polyester</li>
-                        <li>Machine wash</li>
-                    </ul>
-                    <h4>Size & Fit</h4>
-                    <ul>
-                        <li>Regular fit</li>
-                        <li>The model (height 5'8" and chest 33") is wearing a size S</li>
-                    </ul>
+                    <h4>Detalhes</h4>
+                    <p><?= $produto->descricao ?></p>
+<!--                    <h4>Material & care</h4>-->
+<!--                    <ul>-->
+<!--                        <li>Polyester</li>-->
+<!--                        <li>Machine wash</li>-->
+<!--                    </ul>-->
+<!--                    <h4>Size & Fit</h4>-->
+<!--                    <ul>-->
+<!--                        <li>Regular fit</li>-->
+<!--                        <li>The model (height 5'8" and chest 33") is wearing a size S</li>-->
+<!--                    </ul>-->
 
                     <blockquote>
                         <p><em>Define style this season with Armani's new range of trendy tops, crafted with intricate details. Create a chic statement look by teaming this lace number with skinny jeans and pumps.</em>
@@ -386,18 +386,18 @@ _________________________________________________________ -->
                                 <div class="flipper">
                                     <div class="front">
                                         <a href="detail.html">
-                                            <img src="img/product2.jpg" alt="" class="img-responsive">
+                                            <img src="/kaszepol/assets/img/product2.jpg" alt="" class="img-responsive">
                                         </a>
                                     </div>
                                     <div class="back">
                                         <a href="detail.html">
-                                            <img src="img/product2_2.jpg" alt="" class="img-responsive">
+                                            <img src="/kaszepol/assets/img/product2_2.jpg" alt="" class="img-responsive">
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <a href="detail.html" class="invisible">
-                                <img src="img/product2.jpg" alt="" class="img-responsive">
+                                <img src="/kaszepol/assets/img/product2.jpg" alt="" class="img-responsive">
                             </a>
                             <div class="text">
                                 <h3>Fur coat</h3>
@@ -413,18 +413,18 @@ _________________________________________________________ -->
                                 <div class="flipper">
                                     <div class="front">
                                         <a href="detail.html">
-                                            <img src="img/product1.jpg" alt="" class="img-responsive">
+                                            <img src="/kaszepol/assets/img/product1.jpg" alt="" class="img-responsive">
                                         </a>
                                     </div>
                                     <div class="back">
                                         <a href="detail.html">
-                                            <img src="img/product1_2.jpg" alt="" class="img-responsive">
+                                            <img src="/kaszepol/assets/img/product1_2.jpg" alt="" class="img-responsive">
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <a href="detail.html" class="invisible">
-                                <img src="img/product1.jpg" alt="" class="img-responsive">
+                                <img src="/kaszepol/assets/img/product1.jpg" alt="" class="img-responsive">
                             </a>
                             <div class="text">
                                 <h3>Fur coat</h3>
@@ -441,18 +441,18 @@ _________________________________________________________ -->
                                 <div class="flipper">
                                     <div class="front">
                                         <a href="detail.html">
-                                            <img src="img/product3.jpg" alt="" class="img-responsive">
+                                            <img src="/kaszepol/assets/img/product3.jpg" alt="" class="img-responsive">
                                         </a>
                                     </div>
                                     <div class="back">
                                         <a href="detail.html">
-                                            <img src="img/product3_2.jpg" alt="" class="img-responsive">
+                                            <img src="/kaszepol/assets/img/product3_2.jpg" alt="" class="img-responsive">
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <a href="detail.html" class="invisible">
-                                <img src="img/product3.jpg" alt="" class="img-responsive">
+                                <img src="/kaszepol/assets/img/product3.jpg" alt="" class="img-responsive">
                             </a>
                             <div class="text">
                                 <h3>Fur coat</h3>
@@ -638,14 +638,14 @@ _________________________________________________________ -->
 
 <!-- *** SCRIPTS TO INCLUDE ***
 _________________________________________________________ -->
-<script src="js/jquery-1.11.0.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.cookie.js"></script>
-<script src="js/waypoints.min.js"></script>
-<script src="js/modernizr.js"></script>
-<script src="js/bootstrap-hover-dropdown.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/front.js"></script>
+<script src="/kaszepol/assets/js/jquery-1.11.0.min.js"></script>
+<script src="/kaszepol/assets/js/bootstrap.min.js"></script>
+<script src="/kaszepol/assets/js/jquery.cookie.js"></script>
+<script src="/kaszepol/assets/js/waypoints.min.js"></script>
+<script src="/kaszepol/assets/js/modernizr.js"></script>
+<script src="/kaszepol/assets/js/bootstrap-hover-dropdown.js"></script>
+<script src="/kaszepol/assets/js/owl.carousel.min.js"></script>
+<script src="/kaszepol/assets/js/front.js"></script>
 
 
 
