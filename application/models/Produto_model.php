@@ -18,4 +18,17 @@ class Produto_model extends CI_Model
     {
         return $this->db->get_where('produto', ['id_tipo_cat' => $id_tipo])->result();
     }
+
+    public function get_produtos_aleatorios($qtd = 3)
+    {
+        $sql = "SELECT * FROM produto WHERE id IN (
+                   SELECT id FROM (
+                      SELECT id FROM produto ORDER BY RAND() LIMIT $qtd
+                    )
+                t)";
+
+        $result = $this->db->query($sql)->result();
+
+        return $result;
+    }
 }

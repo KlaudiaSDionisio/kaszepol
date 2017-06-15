@@ -128,14 +128,14 @@ _________________________________________________________ -->
 
 <!-- *** SCRIPTS TO INCLUDE ***
 _________________________________________________________ -->
-<script src="js/jquery-1.11.0.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.cookie.js"></script>
-<script src="js/waypoints.min.js"></script>
-<script src="js/modernizr.js"></script>
-<script src="js/bootstrap-hover-dropdown.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/front.js"></script>
+<script src="<?= asset_url('js/jquery-1.11.0.min.js') ?>"></script>
+<script src="<?= asset_url('js/bootstrap.min.js') ?>"></script>
+<script src="<?= asset_url('js/jquery.cookie.js') ?>"></script>
+<script src="<?= asset_url('js/waypoints.min.js') ?>"></script>
+<script src="<?= asset_url('js/modernizr.js') ?>"></script>
+<script src="<?= asset_url('js/bootstrap-hover-dropdown.js') ?>"></script>
+<script src="<?= asset_url('js/owl.carousel.min.js') ?>"></script>
+<script src="<?= asset_url('js/front.js') ?>"></script>
 
 
 </body>

@@ -20,19 +20,19 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
 
     <!-- styles -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="<?= asset_url('css/font-awesome.css') ?>" rel="stylesheet">
+    <link href="<?= asset_url('css/bootstrap.min.css') ?>" rel="stylesheet">
+    <link href="<?= asset_url('css/animate.min.css') ?>" rel="stylesheet">
+    <link href="<?= asset_url('css/owl.carousel.css') ?>" rel="stylesheet">
+    <link href="<?= asset_url('css/owl.theme.css') ?>" rel="stylesheet">
 
     <!-- theme stylesheet -->
-    <link href="css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+    <link href="<?= asset_url('css/style.default.css')?>" rel="stylesheet" id="theme-stylesheet">
 
     <!-- your stylesheet with modifications -->
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="<?= asset_url('css/custom.css')?>" rel="stylesheet">
 
-    <script src="js/respond.min.js"></script>
+    <script src="<?= asset_url('js/respond.min.js')?>"></script>
 
     <link rel="shortcut icon" href="favicon.png">
 
@@ -105,8 +105,8 @@ _________________________________________________________ -->
         <div class="navbar-header">
 
             <a class="navbar-brand home" href="index.html" data-animate-hover="bounce">
-                <img src="img/polska/logo.jpg" alt="Obaju logo" class="hidden-xs">
-                <img src="img/polska/logo.jpg" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - ir para home</span>
+                <img src="<?= asset_url('img/polska/logo.png')?>" alt="Obaju logo" class="hidden-xs">
+                <img src="<?= asset_url('img/polska/logo.png')?>" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - ir para home</span>
             </a>
             <div class="navbar-buttons">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
