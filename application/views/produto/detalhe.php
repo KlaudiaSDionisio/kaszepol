@@ -25,7 +25,7 @@ _________________________________________________________ -->
 
                 <div class="banner">
                     <a href="#">
-                        <img src="/kaszepol/assets/img/banner.jpg" alt="sales 2014" class="img-responsive">
+                        <img src="<?= asset_url('img/polska/logo_cat.jpg') ?>" alt="sales 2014" class="img-responsive">
                     </a>
                 </div>
             </div>
@@ -67,7 +67,7 @@ _________________________________________________________ -->
                                 <?php endif ?>
                             </div>
                             <p class="text-center buttons">
-                                <a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Adicionar ao carrinho</a>
+                                <a href="<?= site_url("produto/carrinho_adicionar/$produto->id")?>" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Adicionar ao carrinho</a>
                             </p>
 
 
@@ -100,7 +100,7 @@ _________________________________________________________ -->
 
                     <hr>
                     <div class="social">
-                        <h4>Show it to your friends</h4>
+                        <h4>Compartilha com os seus amigos!</h4>
                         <p>
                             <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
                             <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
