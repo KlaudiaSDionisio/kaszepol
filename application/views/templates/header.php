@@ -47,7 +47,7 @@ _________________________________________________________ -->
 <div id="top">
     <div class="container">
         <div class="col-md-6 offer" data-animate="fadeInDown">
-            <a href="#hot" class="btn btn-success btn-sm" data-animate-hover="shake">Oferta do dia</a>  <a href="#">Ganha desconto de 15% na compra de R$ 100!</a>
+            <a href="#hot" class="btn btn-success btn-sm" data-animate-hover="shake">Oferta do dia</a>  <a href="#">Ganha desconto de 15% na compra de R$ 300!</a>
         </div>
         <div class="col-md-6" data-animate="fadeInDown">
             <ul class="menu">
@@ -55,9 +55,7 @@ _________________________________________________________ -->
                 </li>
                 <li><a href="register.html">Registrar</a>
                 </li>
-                <li><a href="contact.html">Contato</a>
-                </li>
-                <li><a href="#hot">Mais visualizados</a>
+                <li><a href="#hot">Melhores da semana</a>
                 </li>
             </ul>
         </div>
@@ -127,7 +125,7 @@ _________________________________________________________ -->
         <div class="navbar-collapse collapse" id="navigation">
 
             <ul class="nav navbar-nav navbar-left">
-                <li class="active"><a href="index.html">Home</a>
+                <li class="active"><a href="<?= site_url('')?>">Home</a>
                 </li>
                 <li class="dropdown yamm-fw">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Produtos<b class="caret"></b></a>
@@ -177,54 +175,56 @@ _________________________________________________________ -->
                         </li>
                     </ul>
                 </li>
-
-
-                <li class="dropdown yamm-fw">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">sobre <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <div class="yamm-content">
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <h5>Empresa & Produto</h5>
-                                        <ul>
-                                            <li><a href="text.html">Quem somos?</a>
-                                            </li>
-                                            <li><a href="text-right.html">Qualidade de produto</a>
-                                            </li>
-                                            <li><a href="faq.html">FAQ</a>
-                                            </li>
-                                            <li><a href="contact.html">Contato</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <h5>Usuário</h5>
-                                        <ul>
-                                            <li><a href="register.html">Registro / login</a>
-                                            </li>
-                                            <li><a href="customer-orders.html">História de compras</a>
-                                            </li>
-                                            <li><a href="customer-wishlist.html">Lista de desejo</a>
-                                            </li>
-                                            <li><a href="customer-account.html">Mudar senha</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <h5>Blog</h5>
-                                        <ul>
-                                            <li><a href="blog.html">Blog</a>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.yamm-content -->
-                        </li>
-                    </ul>
+                <li class=""><a href="<?= site_url('/blog')?>">Blog</a>
                 </li>
+
+
+<!--                <li class="dropdown yamm-fw">-->
+<!--                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">sobre <b class="caret"></b></a>-->
+<!--                    <ul class="dropdown-menu">-->
+<!--                        <li>-->
+<!--                            <div class="yamm-content">-->
+<!--                                <div class="row">-->
+<!--                                    <div class="col-sm-3">-->
+<!--                                        <h5>Empresa & Produto</h5>-->
+<!--                                        <ul>-->
+<!--                                            <li><a href="text.html">Quem somos?</a>-->
+<!--                                            </li>-->
+<!--                                            <li><a href="text-right.html">Qualidade de produto</a>-->
+<!--                                            </li>-->
+<!--                                            <li><a href="faq.html">FAQ</a>-->
+<!--                                            </li>-->
+<!--                                            <li><a href="contact.html">Contato</a>-->
+<!--                                            </li>-->
+<!--                                        </ul>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-sm-3">-->
+<!--                                        <h5>Usuário</h5>-->
+<!--                                        <ul>-->
+<!--                                            <li><a href="register.html">Registro / login</a>-->
+<!--                                            </li>-->
+<!--                                            <li><a href="customer-orders.html">História de compras</a>-->
+<!--                                            </li>-->
+<!--                                            <li><a href="customer-wishlist.html">Lista de desejo</a>-->
+<!--                                            </li>-->
+<!--                                            <li><a href="customer-account.html">Mudar senha</a>-->
+<!--                                            </li>-->
+<!--                                        </ul>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-sm-3">-->
+<!--                                        <h5>Blog</h5>-->
+<!--                                        <ul>-->
+<!--                                            <li><a href="blog.html">Blog</a>-->
+<!--                                            </li>-->
+<!---->
+<!--                                        </ul>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <!-- /.yamm-content -->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </li>-->
             </ul>
 
         </div>
