@@ -4,20 +4,20 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-6">
-                <h4>Páginas</h4>
+<!--                <h4>Páginas</h4>-->
+<!---->
+<!--                <ul>-->
+<!--                    <li><a href="text.html">Quem somos?</a>-->
+<!--                    </li>-->
+<!--                    <li><a href="text.html">Terms and conditions</a>-->
+<!--                    </li>-->
+<!--                    <li><a href="faq.html">FAQ</a>-->
+<!--                    </li>-->
+<!--                    <li><a href="contact.html">Contato</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
 
-                <ul>
-                    <li><a href="text.html">Quem somos?</a>
-                    </li>
-                    <li><a href="text.html">Terms and conditions</a>
-                    </li>
-                    <li><a href="faq.html">FAQ</a>
-                    </li>
-                    <li><a href="contact.html">Contato</a>
-                    </li>
-                </ul>
-
-                <hr>
+<!--                <hr>-->
                 <hr class="hidden-md hidden-lg hidden-sm">
 
             </div>
@@ -35,13 +35,13 @@
                 <h4>Onde estamos: </h4>
 
                 <p><strong>Kaszepol</strong>
-                    <br>+55 43 9 9865-8720
+                    <br>Celular: +55 43 9 9865-8720
+                    <br>E-mail: contato@kaszepol.com.br
                     <br>Bandeirantes - Paraná
                     <br>Brasil
                     <br>
                 </p>
 
-                <a href="contact.html">Contato</a>
 
                 <hr class="hidden-md hidden-lg">
 
@@ -79,8 +79,6 @@
                     <a href="#" class="facebook external" data-animate-hover="shake"><i class="fa fa-facebook"></i></a>
                     <a href="#" class="twitter external" data-animate-hover="shake"><i class="fa fa-twitter"></i></a>
                     <a href="#" class="instagram external" data-animate-hover="shake"><i class="fa fa-instagram"></i></a>
-                    <a href="#" class="gplus external" data-animate-hover="shake"><i class="fa fa-google-plus"></i></a>
-                    <a href="#" class="email external" data-animate-hover="shake"><i class="fa fa-envelope"></i></a>
                 </p>
 
 
