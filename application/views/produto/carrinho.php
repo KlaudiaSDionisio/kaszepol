@@ -37,16 +37,23 @@
                                         <?php $total += ($p->preco_promocao ? $p->preco_promocao : $p->preco) * $_SESSION['carrinho'][$p->id] ?>
                                         <tr>
                                             <td>
-                                                <a href="#">
+                                                <a href="<?= site_url("produto/detalhe/$p->id")?>">
                                                     <img src="<?= asset_url("img/produtos_prontos/$p->imagem") ?>"
                                                          alt="<?= $p->nome ?>">
                                                 </a>
                                             </td>
-                                            <td><a href="#"><?= $p->nome ?></a>
+                                            <td><a href="<?= site_url("produto/detalhe/$p->id")?>"><?= $p->nome ?></a>
                                             </td>
                                             <td>
-                                                <input type="number" value="<?= $_SESSION['carrinho'][$p->id] ?>"
-                                                       class="form-control">
+                                                <a href="<?= site_url("produto/carrinho_decrementar/$p->id") ?>">
+                                                    <i class="fa fa-minus"></i>
+                                                </a>
+                                                <b><?= $_SESSION['carrinho'][$p->id] ?></b>
+                                                <a href="<?= site_url("produto/carrinho_adicionar/$p->id") ?>">
+                                                    <i class="fa fa-plus"></i>
+                                                </a>
+
+
 
                                             </td>
                                             <td>R$ <?= $p->preco_promocao ? $p->preco_promocao : $p->preco ?></td>
@@ -54,9 +61,7 @@
                                             <td>
                                                 R$ <?= number_format(($p->preco_promocao ? $p->preco_promocao : $p->preco) * $_SESSION['carrinho'][$p->id], 2) ?></td>
                                             <td>
-                                                <a href="<?= site_url("produto/carrinho_adicionar/$p->id") ?>">
-                                                    <i class="fa fa-refresh"></i>
-                                                </a>
+
                                                 <a href="<?= site_url("produto/carrinho_remover/$p->id") ?>">
                                                     <i class="fa fa-trash-o"></i>
                                                 </a>
@@ -67,7 +72,7 @@
                                     <tfoot>
                                     <tr>
                                         <th colspan="5">Total</th>
-                                        <th colspan="2">R$ <?= $total ?></th>
+                                        <th colspan="2">R$ <?= number_format($total, 2) ?></th>
                                     </tr>
                                     </tfoot>
                                 </table>
@@ -78,12 +83,12 @@
 
                         <div class="box-footer">
                             <div class="pull-left">
-                                <a href="category.html" class="btn btn-default"><i class="fa fa-chevron-left"></i>
-                                    Continue shopping</a>
+                                <a href="<?= site_url()?>" class="btn btn-default"><i class="fa fa-chevron-left"></i>
+                                    Continuar comprando</a>
                             </div>
                             <div class="pull-right">
-                                <button class="btn btn-default"><i class="fa fa-refresh"></i> Update basket</button>
-                                <button type="submit" class="btn btn-primary">Proceed to checkout <i
+<!--                                <button class="btn btn-default"><i class="fa fa-refresh"></i> Update basket</button>-->
+                                <button type="submit" class="btn btn-primary">Finalizar pedido <i
                                         class="fa fa-chevron-right"></i>
                                 </button>
                             </div>
@@ -94,99 +99,7 @@
                 </div>
                 <!-- /.box -->
 
-
-                <div class="row same-height-row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="box same-height">
-                            <h3>You may also like these products</h3>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product same-height">
-                            <div class="flip-container">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <a href="detail.html">
-                                            <img src="img/product2.jpg" alt="" class="img-responsive">
-                                        </a>
-                                    </div>
-                                    <div class="back">
-                                        <a href="detail.html">
-                                            <img src="img/product2_2.jpg" alt="" class="img-responsive">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="detail.html" class="invisible">
-                                <img src="img/product2.jpg" alt="" class="img-responsive">
-                            </a>
-                            <div class="text">
-                                <h3>Fur coat</h3>
-                                <p class="price">$143</p>
-                            </div>
-                        </div>
-                        <!-- /.product -->
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product same-height">
-                            <div class="flip-container">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <a href="detail.html">
-                                            <img src="img/product1.jpg" alt="" class="img-responsive">
-                                        </a>
-                                    </div>
-                                    <div class="back">
-                                        <a href="detail.html">
-                                            <img src="img/product1_2.jpg" alt="" class="img-responsive">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="detail.html" class="invisible">
-                                <img src="img/product1.jpg" alt="" class="img-responsive">
-                            </a>
-                            <div class="text">
-                                <h3>Fur coat</h3>
-                                <p class="price">$143</p>
-                            </div>
-                        </div>
-                        <!-- /.product -->
-                    </div>
-
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product same-height">
-                            <div class="flip-container">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <a href="detail.html">
-                                            <img src="img/product3.jpg" alt="" class="img-responsive">
-                                        </a>
-                                    </div>
-                                    <div class="back">
-                                        <a href="detail.html">
-                                            <img src="img/product3_2.jpg" alt="" class="img-responsive">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="detail.html" class="invisible">
-                                <img src="img/product3.jpg" alt="" class="img-responsive">
-                            </a>
-                            <div class="text">
-                                <h3>Fur coat</h3>
-                                <p class="price">$143</p>
-
-                            </div>
-                        </div>
-                        <!-- /.product -->
-                    </div>
-
-                </div>
-
+                <?php $this->load->view('produto/_gostar', ['produtos' => $produtos_aleatorios])?>
 
             </div>
             <!-- /.col-md-9 -->
@@ -196,26 +109,30 @@
                     <div class="box-header">
                         <h3>Resumo do pedido</h3>
                     </div>
-                    <p class="text-muted">Frete grátis.</p>
+                    <p class="text-muted">Em compras acima de R$ 300.00 será concedido um desconto de 15%</p>
 
                     <div class="table-responsive">
                         <table class="table">
                             <tbody>
                             <tr>
                                 <td>Subtotal</td>
-                                <th>R$ <?= $total ?></th>
+                                <th>R$ <?= number_format($total, 2) ?></th>
                             </tr>
                             <tr>
                                 <td>Frete</td>
-                                <th>R$ 0.00</th>
+                                <th>Grátis</th>
                             </tr>
                             <tr>
                                 <td>Adicional</td>
                                 <th>R$ 0.00</th>
                             </tr>
+                            <tr>
+                                <td>Desconto</td>
+                                <th>R$ <?= number_format(($total > 300?$total*0.15:0), 2)?></th>
+                            </tr>
                             <tr class="total">
                                 <td>Total</td>
-                                <th>R$ <?= $total ?></th>
+                                <th>R$ <?= number_format(($total > 300?$total*0.85:$total), 2) ?></th>
                             </tr>
                             </tbody>
                         </table>

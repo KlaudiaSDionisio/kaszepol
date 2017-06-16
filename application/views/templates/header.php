@@ -47,15 +47,15 @@ _________________________________________________________ -->
 <div id="top">
     <div class="container">
         <div class="col-md-6 offer" data-animate="fadeInDown">
-            <a href="#hot" class="btn btn-success btn-sm" data-animate-hover="shake">Oferta do dia</a>  <a href="#">Ganha desconto de 15% na compra de R$ 300!</a>
+            <a href="<?= site_url('produto/detalhe/19')?>" class="btn btn-success btn-sm" data-animate-hover="shake">Oferta do dia</a>  <a>Ganhe desconto de 15% nas compras acima de R$ 300.00!</a>
         </div>
         <div class="col-md-6" data-animate="fadeInDown">
             <ul class="menu">
-                <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+<!--                <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>-->
+<!--                </li>-->
+<!--                <li><a href="register.html">Registrar</a>-->
                 </li>
-                <li><a href="register.html">Registrar</a>
-                </li>
-                <li><a href="#hot">Melhores da semana</a>
+                <li><a href="<?= site_url('#hot')?>">Melhores da semana</a>
                 </li>
             </ul>
         </div>
@@ -69,7 +69,7 @@ _________________________________________________________ -->
                     <h4 class="modal-title" id="Login">login</h4>
                 </div>
                 <div class="modal-body">
-                    <form action="customer-orders.html" method="post">
+                    <form action="<?=site_url() ?>" method="post">
                         <div class="form-group">
                             <input type="text" class="form-control" id="email-modal" placeholder="email">
                         </div>
@@ -84,7 +84,7 @@ _________________________________________________________ -->
                     </form>
 
                     <p class="text-center text-muted">Não registrado?</p>
-                    <p class="text-center text-muted"><a href="register.html"><strong>Registrar agora!</strong></a></p>
+                    <p class="text-center text-muted"><a href="<?=site_url() ?>"><strong>Registrar agora!</strong></a></p>
 
                 </div>
             </div>

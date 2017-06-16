@@ -44,6 +44,8 @@ class Produto extends CI_Controller {
 			$data['produtos'] = [];
 		}
 
+        $data['produtos_aleatorios'] = $this->Produto_model->get_produtos_aleatorios();
+
 
 		$this->load->template('produto/carrinho', $data);
 	}
@@ -61,6 +63,25 @@ class Produto extends CI_Controller {
 				$_SESSION['carrinho'] = [];
 				$_SESSION['carrinho'][$id] = 1;
 			}
+		}else{
+			redirect(site_url());
+		}
+
+		redirect(site_url('produto/carrinho'));
+	}
+
+	public function carrinho_decrementar($id)
+	{
+		if(is_numeric($id)){
+			if(isset($_SESSION['carrinho'])) {
+                if (isset($_SESSION['carrinho'][$id])) {
+                    if($_SESSION['carrinho'][$id] == 1){
+                        unset($_SESSION['carrinho'][$id]);
+                    }else{
+                        $_SESSION['carrinho'][$id]--;
+                    }
+                }
+            }
 		}else{
 			redirect(site_url());
 		}

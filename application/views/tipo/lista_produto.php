@@ -76,6 +76,11 @@
                                     <?php else: ?>
                                         <p class="price">R$<?= $p->preco ?></p>
                                     <?php endif ?>
+
+                                    <p class="buttons">
+                                        <a href="<?= site_url("produto/detalhe/$p->id")?>" class="btn btn-default">Detalhes</a>
+                                        <a href="<?= site_url("produto/carrinho_adicionar/$p->id")?>" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Carrinho</a>
+                                    </p>
                                 </div>
                                 <!-- /.text -->
 
@@ -98,34 +103,8 @@
                         </div>
                     <?php endforeach;?>
 
-
                     </div>
                 </div>
-                <!-- /.products -->
-
-                <!--<div class="pages">-->
-
-                <!--<p class="loadMore">-->
-                <!--<a href="#" class="btn btn-primary btn-lg"><i class="fa fa-chevron-down"></i> Ver mais</a>-->
-                <!--</p>-->
-
-                <!--<ul class="pagination">-->
-                <!--<li><a href="#">&laquo;</a>-->
-                <!--</li>-->
-                <!--<li class="active"><a href="#">1</a>-->
-                <!--</li>-->
-                <!--<li><a href="#">2</a>-->
-                <!--</li>-->
-                <!--<li><a href="#">3</a>-->
-                <!--</li>-->
-                <!--<li><a href="#">4</a>-->
-                <!--</li>-->
-                <!--<li><a href="#">5</a>-->
-                <!--</li>-->
-                <!--<li><a href="#">&raquo;</a>-->
-                <!--</li>-->
-                <!--</ul>-->
-                <!--</div>-->
 
 
             </div>
