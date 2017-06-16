@@ -103,4 +103,16 @@ class Produto extends CI_Controller {
 
 		redirect(site_url('produto/carrinho'));
 	}
+
+    public function pesquisa()
+    {
+        $str = $this->input->get('q');
+        $data['palavra'] = $str;
+        if($str){
+            $data['produtos'] = $this->Produto_model->pesquisa($str);
+        }else{
+            $data['produtos'] = [];
+        }
+        $this->load->template('produto/lista_produto', $data);
+    }
 }

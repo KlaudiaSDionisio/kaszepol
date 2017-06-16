@@ -1,3 +1,4 @@
+<?php $total = 0 ?>
 <div id="all">
 
     <div id="content">
@@ -32,7 +33,6 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <?php $total = 0 ?>
                                     <?php foreach ($produtos as $p): ?>
                                         <?php $total += ($p->preco_promocao ? $p->preco_promocao : $p->preco) * $_SESSION['carrinho'][$p->id] ?>
                                         <tr>
@@ -88,9 +88,11 @@
                             </div>
                             <div class="pull-right">
 <!--                                <button class="btn btn-default"><i class="fa fa-refresh"></i> Update basket</button>-->
+                                <?php if(count($produtos)):?>
                                 <button type="submit" class="btn btn-primary">Finalizar pedido <i
                                         class="fa fa-chevron-right"></i>
                                 </button>
+                                <?php endif ?>
                             </div>
                         </div>
 

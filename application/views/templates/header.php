@@ -51,8 +51,8 @@ _________________________________________________________ -->
         </div>
         <div class="col-md-6" data-animate="fadeInDown">
             <ul class="menu">
-<!--                <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>-->
-<!--                </li>-->
+                <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+                </li>
 <!--                <li><a href="register.html">Registrar</a>-->
                 </li>
                 <li><a href="<?= site_url('#hot')?>">Melhores da semana</a>
@@ -248,9 +248,9 @@ _________________________________________________________ -->
 
         <div class="collapse clearfix" id="search">
 
-            <form class="navbar-form" role="search">
+            <form class="navbar-form" role="search" method="GET" action="<?= site_url('produto/pesquisa')?>">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" class="form-control" name="q" placeholder="Pesquisar...">
                         <span class="input-group-btn">
 
 			<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>

@@ -26,12 +26,4 @@ class Tipo extends CI_Controller {
 		$this->load->template('tipo/lista_produto', $data);
 	}
 
-	public function detalhe($id)
-	{
-		$this->load->model('Produto_model');
-
-		$this->Produto_model->get_produto($id);
-
-		$this->load->view('welcome_message');
-	}
 }

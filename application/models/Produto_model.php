@@ -52,4 +52,12 @@ class Produto_model extends CI_Model
 
         return $result;
     }
+
+    public function pesquisa($str)
+    {
+        $this->db->like('nome', $str);
+        $result = $this->db->get('produto')->result();
+
+        return $result;
+    }
 }

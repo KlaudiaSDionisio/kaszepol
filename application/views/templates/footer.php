@@ -59,7 +59,7 @@
                 <form>
                     <div class="input-group">
 
-                        <input type="text" class="form-control">
+                        <input type="email" class="form-control">
 
                                 <span class="input-group-btn">
 
