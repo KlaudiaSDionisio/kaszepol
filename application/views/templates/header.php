@@ -83,8 +83,8 @@ _________________________________________________________ -->
 
                     </form>
 
-                    <p class="text-center text-muted">Not registered yet?</p>
-                    <p class="text-center text-muted"><a href="register.html"><strong>Register now</strong></a>! It is easy and done in 1&nbsp;minute and gives you access to special discounts and much more!</p>
+                    <p class="text-center text-muted">Não registrado?</p>
+                    <p class="text-center text-muted"><a href="register.html"><strong>Registrar agora!</strong></a></p>
 
                 </div>
             </div>
@@ -103,8 +103,8 @@ _________________________________________________________ -->
         <div class="navbar-header">
 
             <a class="navbar-brand home" href="<?=site_url()?>" data-animate-hover="bounce">
-                <img src="<?= asset_url('img/polska/logo.png')?>" alt="Obaju logo" class="hidden-xs">
-                <img src="<?= asset_url('img/polska/logo.png')?>" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - ir para home</span>
+                <img src="<?= asset_url('img/polska/logo.png')?>" alt="Kaszepol logo" class="hidden-xs">
+                <img src="<?= asset_url('img/polska/logo.png')?>" alt="Kaszepol logo" class="visible-xs"><span class="sr-only">Kaszepol - ir para home</span>
             </a>
             <div class="navbar-buttons">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
