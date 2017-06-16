@@ -5,12 +5,10 @@
 
             <div class="col-md-12">
                 <ul class="breadcrumb">
-                    <li><a href="#">Home</a>
+                    <li><a href="<?= site_url()?>">Home</a>
                     </li>
-                    <li><a href="#"><?= $categoria->nome ?></a>
-                    </li>
-                    <li><a href="#"><?= $tipo_cat->nome ?></a>
-                    </li>
+                    <li><?= $categoria->nome ?></li>
+                    <li><a href="<?= site_url("tipo/index/$produto->id_tipo_cat")?>"><?= $tipo_cat->nome?></a></li>
                     <li><?= $produto->nome ?></li>
                 </ul>
 

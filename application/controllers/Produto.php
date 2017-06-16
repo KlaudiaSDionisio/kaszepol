@@ -115,4 +115,11 @@ class Produto extends CI_Controller {
         }
         $this->load->template('produto/lista_produto', $data);
     }
+
+    public function limpa_carrinho()
+    {
+        $_SESSION['carrinho'] = null;
+
+        redirect(site_url());
+    }
 }

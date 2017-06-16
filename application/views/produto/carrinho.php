@@ -16,7 +16,7 @@
 
                 <div class="box">
 
-                    <form method="post" action="checkout1.html">
+                    <form method="post" action="<?= site_url('produto/limpa_carrinho') ?>">
 
                         <h1>Carrinho</h1>
                         <p class="text-muted">Você possui <?= count($produtos) ?> produto(s) no seu carrinho.</p>
@@ -89,7 +89,7 @@
                             <div class="pull-right">
 <!--                                <button class="btn btn-default"><i class="fa fa-refresh"></i> Update basket</button>-->
                                 <?php if(count($produtos)):?>
-                                <button type="submit" class="btn btn-primary">Finalizar pedido <i
+                                <button type="submit" class="btn btn-primary" onclick="alert('Pedido realizado com sucesso! Os dados do pedido serão enviados por e-mail.')">Finalizar pedido <i
                                         class="fa fa-chevron-right"></i>
                                 </button>
                                 <?php endif ?>

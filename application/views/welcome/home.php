@@ -119,6 +119,11 @@ _________________________________________________________ -->
                                 <?php else: ?>
                                     <p class="price">R$<?= $p->preco ?></p>
                                 <?php endif ?>
+
+                                <p class="text-center buttons">
+                                    <a href="<?= site_url("produto/carrinho_adicionar/$p->id") ?>"
+                                       class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Carrinho</a>
+                                </p>
                             </div>
                             <!-- /.text -->
 
