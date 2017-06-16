@@ -43,7 +43,7 @@ _________________________________________________________ -->
                             </div>
 
                             <h3><a href="#">Nosso cliente é importante</a></h3>
-                            <p>We are known to provide best possible service ever</p>
+                            <p>Nós sabemos o valor dos nossos clientes! Por isso nosso frete é gratis!</p>
                         </div>
                     </div>
 
@@ -53,7 +53,7 @@ _________________________________________________________ -->
                             </div>
 
                             <h3><a href="#">Melhor preço</a></h3>
-                            <p>You can check that the height of the boxes adjust when longer text like this one is used in one of them.</p>
+                            <p>Nossos produtos têm os melhorres preços e várias promoções!</p>
                         </div>
                     </div>
 
@@ -62,8 +62,8 @@ _________________________________________________________ -->
                             <div class="icon"><i class="fa fa-thumbs-up"></i>
                             </div>
 
-                            <h3><a href="#">100% satisfação garantida</a></h3>
-                            <p>Free returns on everything for 3 months.</p>
+                            <h3><a href="#">satisfação 100% garantida</a></h3>
+                            <p>Os produtos feitos com carinho e com os melhores tecidos!</p>
                         </div>
                     </div>
                 </div>
