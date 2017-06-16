@@ -12,10 +12,10 @@
                     <li><?= $tipo_cat->nome?></li>
                 </ul>
 
-                <div class="box">
-                    <h1>Camisas Femininas</h1>
-                    <p></p>
-                </div>
+<!--                <div class="box">-->
+<!--                    <h1>Camisas Femininas</h1>-->
+<!--                    <p></p>-->
+<!--                </div>-->
 
                 <!--<div class="box info-bar">-->
                 <!--<div class="row">-->

@@ -17,7 +17,20 @@ class Produto_model extends CI_Model
             $result = $this->db->get_where('produto', ['id' => $info])->result();
         }
 
+        return $result;
+    }
 
+    public function get_produtos(array $info)
+    {
+        foreach($info as $key => $value){
+            if(is_array($value)){
+                $this->db->where_in($key, $value);
+            }else{
+                $this->db->where($key, $value);
+            }
+        }
+
+        $result = $this->db->get('produto')->result();
 
         return $result;
     }

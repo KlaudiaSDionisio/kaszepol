@@ -115,8 +115,8 @@ _________________________________________________________ -->
                     <span class="sr-only">Toggle search</span>
                     <i class="fa fa-search"></i>
                 </button>
-                <a class="btn btn-default navbar-toggle" href="basket.html">
-                    <i class="fa fa-shopping-cart"></i>  <span class="hidden-xs">3 items in cart</span>
+                <a class="btn btn-default navbar-toggle" href="<?= site_url('produto/carrinho')?>">
+                    <i class="fa fa-shopping-cart"></i>  <span class="hidden-xs"><?= isset($_SESSION['carrinho'])?(count($_SESSION['carrinho'])):0 ?> produto(s) no carrinho</span>
                 </a>
             </div>
         </div>
@@ -233,7 +233,7 @@ _________________________________________________________ -->
         <div class="navbar-buttons">
 
             <div class="navbar-collapse collapse right" id="basket-overview">
-                <a href="basket.html" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">3 items in cart</span></a>
+                <a href="<?= site_url('produto/carrinho')?>" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm"><?= isset($_SESSION['carrinho'])?(count($_SESSION['carrinho'])):0 ?> produto(s) no carrinho</span></a>
             </div>
             <!--/.nav-collapse -->
 

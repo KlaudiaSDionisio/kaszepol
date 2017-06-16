@@ -7,6 +7,8 @@ class Produto extends CI_Controller {
 	{
 		parent::__construct();
 
+		$this->load->model('Produto_model');
+
 	}
 
 	public function index()
@@ -16,7 +18,7 @@ class Produto extends CI_Controller {
 
 	public function detalhe($id)
 	{
-		$this->load->model('Produto_model');
+
 		$this->load->model('Tipo_cat_model');
 		$this->load->model('Categoria_model');
 
@@ -29,10 +31,55 @@ class Produto extends CI_Controller {
 
 			$this->load->template('produto/detalhe', $data);
 		}else{
-			redirect('/kaszepol');
+			redirect(site_url());
 		}
-//		$data['tipo_cat'] = $this->Tipo_cat_model->get_tipo_cat($id);
+	}
+
+	public function carrinho()
+	{
+		if(isset($_SESSION['carrinho']) && is_array($_SESSION['carrinho']) && count($_SESSION['carrinho'])){
+			$produtos_id = array_keys($_SESSION['carrinho']);
+			$data['produtos'] = $this->Produto_model->get_produtos(['id' => $produtos_id]);
+		}else{
+			$data['produtos'] = [];
+		}
 
 
+		$this->load->template('produto/carrinho', $data);
+	}
+
+	public function carrinho_adicionar($id)
+	{
+		if(is_numeric($id)){
+			if(isset($_SESSION['carrinho'])){
+				if(isset($_SESSION['carrinho'][$id])){
+					$_SESSION['carrinho'][$id]++;
+				}else{
+					$_SESSION['carrinho'][$id] = 1;
+				}
+			}else{
+				$_SESSION['carrinho'] = [];
+				$_SESSION['carrinho'][$id] = 1;
+			}
+		}else{
+			redirect(site_url());
+		}
+
+		redirect(site_url('produto/carrinho'));
+	}
+
+	public function carrinho_remover($id)
+	{
+		if(is_numeric($id)){
+			if(isset($_SESSION['carrinho'])){
+				if(isset($_SESSION['carrinho'][$id])){
+					unset($_SESSION['carrinho'][$id]);
+				}
+			}
+		}else{
+			redirect(site_url());
+		}
+
+		redirect(site_url('produto/carrinho'));
 	}
 }
