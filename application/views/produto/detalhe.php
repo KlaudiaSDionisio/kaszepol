@@ -57,7 +57,7 @@ _________________________________________________________ -->
                     <div class="col-sm-6">
                         <div class="box">
                             <h1 class="text-center"><?= $produto->nome ?></h1>
-                            <p class="goToDescription"><a href="#details" class="scroll-to">Scroll to product details, material & care and sizing</a>
+                            <p class="goToDescription"><a href="#details" class="scroll-to">Dethales do produto</a>
                             </p>
                             <div class="text">
                                 <?php if (!is_null($produto->preco_promocao) && $produto->preco_promocao > 0): ?>
@@ -82,7 +82,9 @@ _________________________________________________________ -->
                 <div class="box" id="details">
                     <p>
                     <h4>Detalhes</h4>
-                    <p><?= $produto->descricao ?></p>
+                    <blockquote>
+                        <p><?= $produto->descricao ?></p>
+                    </blockquote>
 <!--                    <h4>Material & care</h4>-->
 <!--                    <ul>-->
 <!--                        <li>Polyester</li>-->
@@ -94,10 +96,7 @@ _________________________________________________________ -->
 <!--                        <li>The model (height 5'8" and chest 33") is wearing a size S</li>-->
 <!--                    </ul>-->
 
-                    <blockquote>
-                        <p><em>Define style this season with Armani's new range of trendy tops, crafted with intricate details. Create a chic statement look by teaming this lace number with skinny jeans and pumps.</em>
-                        </p>
-                    </blockquote>
+
 
                     <hr>
                     <div class="social">
